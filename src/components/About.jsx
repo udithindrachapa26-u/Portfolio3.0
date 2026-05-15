@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Spline from '@splinetool/react-spline';
 
 export default function About() {
   return (
@@ -60,28 +61,14 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* RIGHT – IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <div className="relative">
-            {/* Image glow */}
-            <div className="absolute inset-0 bg-teal-400/20 blur-3xl rounded-xl" />
-
-            <img
-              src="/about2.png"
-              alt="About Me"
-              className="relative w-72 sm:w-120 h-96 object-cover
-                         rounded-xl border border-white/10"
-            />
-          </div>
-        </motion.div>
+      
 
       </div>
+
+      <div className="absolute top-0 -right-[10%] w-[60vw] h-[110vh] pointer-events-none overflow-hidden">
+        <Spline scene="https://prod.spline.design/BQtYdlCt5GBNSmT1/scene.splinecode" />
+      </div>
+
     </section>
   );
 }
